@@ -1,0 +1,70 @@
+.ecoing-wrapper {
+  background-color: #111;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+#ecoing {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #0d1117;
+  border: 1px solid #535658;
+  border-radius: 0.5rem;
+}
+
+#ecoing .tab {
+  width: calc(100%-1rem);
+  display: flex;
+  border-bottom: 1px solid #535658;
+  padding-left: 0.5rem;
+}
+
+#ecoing .tab ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#ecoing .tab ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+#ecoing .tab ul li:nth-child(1) {
+  border-bottom: 2px solid orange;
+}
+
+#ecoing .tab ul li:nth-child(2) {
+  color: gray;
+}
+
+#ecoing .tab ul li svg {
+  color: #8d9296;
+}
+
+#ecoing .logo-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#ecoing .logo {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+#ecoing .badge-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#ecoing .canvas {
+  max-width: 500px;
+}
