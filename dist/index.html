@@ -4,11 +4,89 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #preload-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+      }
+
+      .preload-wrapper {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.8s ease;
+      }
+
+      .preload-center {
+        text-align: center;
+        color: #f4d0ff;
+      }
+
+      .preload-title {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+        opacity: 0.85;
+      }
+
+      .preload-progress-container {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        background: rgba(244, 208, 255, 0.08);
+        overflow: hidden;
+      }
+
+      .preload-progress-bar {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: -40%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #f4d0ff,
+          #d77bff,
+          #f4d0ff,
+          transparent
+        );
+        animation: preloadAnim 1.2s infinite ease-in-out;
+      }
+
+      @keyframes preloadAnim {
+        0% {
+          left: -40%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+    </style>
+
     <title>신성은진</title>
-    <script type="module" crossorigin src="/assets/index-XjrWtUWL.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BlzsIka_.css">
+    <script type="module" crossorigin src="/assets/index-zvLjr257.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-cvMpqNNq.css">
   </head>
   <body>
+    <div id="preload-screen">
+      <div class="preload-wrapper">
+        <div class="preload-center">
+          <p class="preload-title">잠시만 기다려 주세요</p>
+        </div>
+
+        <div class="preload-progress-container">
+          <div class="preload-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
     <div id="root"></div>
   </body>
 </html>
