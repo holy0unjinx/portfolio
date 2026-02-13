@@ -1,0 +1,49 @@
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #0a0a0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.loader-wrapper.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-center {
+  text-align: center;
+  color: #f4d0ff;
+}
+
+.loader-title {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.loader-percent {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.progress-container {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  height: 20px;
+  width: 100%;
+  background: rgba(244, 208, 255, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f4d0ff, #d77bff, #f4d0ff);
+  transition: width 0.3s ease;
+}

@@ -4,6 +4,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF, PerspectiveCamera, Environment } from "@react-three/drei";
 import * as THREE from "three";
 import FlowText from "./FlowText";
+import Loader from "./Loading";
 
 interface ModelProps {
   url: string;
@@ -58,6 +59,7 @@ const MouseLight = () => {
 export default function Header() {
   return (
     <div id="header-wrapper">
+      <Loader />
       <Canvas
         gl={{
           antialias: true,
@@ -76,19 +78,19 @@ export default function Header() {
         </Suspense>
       </Canvas>
       <img
-        src="/images/warning-line.png"
+        src="/images/warning-line.webp"
         alt="warning-line"
         className="warning-line"
       />
 
       <FlowText />
-      <img src="/images/sticker1.png" alt="sticker1" className="sticker1" />
-      <img src="/images/seal1.png" alt="seal1" className="seal1" />
-      <img src="/images/cat.png" alt="cat" className="cat" />
-      <img src="/images/seal2.png" alt="seal2" className="seal2" />
-      <img src="/images/github.png" alt="github" className="github" />
+      <img src="/images/sticker1.webp" alt="sticker1" className="sticker1" />
+      <img src="/images/seal1.webp" alt="seal1" className="seal1" />
+      <img src="/images/cat.webp" alt="cat" className="cat" />
+      <img src="/images/seal2.webp" alt="seal2" className="seal2" />
+      <img src="/images/github.webp" alt="github" className="github" />
       <img
-        src="/images/scroll_down.png"
+        src="/images/scroll_down.webp"
         alt="scroll_down"
         className="scroll_down"
       />

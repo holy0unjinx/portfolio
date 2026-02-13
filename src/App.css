@@ -17,6 +17,7 @@ body {
 
 #philosophy img {
   width: 80%;
+  max-width: 1000px;
 }
 
 #width-warning {
