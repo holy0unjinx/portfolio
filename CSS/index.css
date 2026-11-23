@@ -1,0 +1,126 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-top: 24px;
+  gap: clamp(16px, 3vw, 48px);
+}
+
+header .content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 32px);
+  padding: 24px clamp(16px, 3vw, 48px);
+  padding-top: 0;
+  container-type: inline-size; /*cqw 쓰려면 해야된대용*/
+  width: 100%;
+}
+
+header .content div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 48px);
+  width: 100%;
+}
+
+h2 {
+  font-size: 22cqw;
+  line-height: 1;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 22cqw;
+  line-height: 0.9;
+  text-decoration: underline solid #000 5%;
+  text-decoration-skip-ink: all;
+}
+
+h3 {
+  font-size: 21cqw;
+  line-height: 1;
+  font-weight: normal;
+  align-self: flex-end;
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+/* 태블릿 */
+@media screen and (min-width: 420px) {
+  header .content div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: 12cqw;
+  }
+
+  h3 {
+    font-size: 12cqw;
+    align-self: flex-start;
+  }
+}
+
+/* 컴터 */
+@media screen and (min-width: 900px) {
+  header .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 16cqw;
+  }
+
+  header .content div {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15em;
+  }
+
+  header {
+    font-size: 5cqw;
+    gap: 0.15em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+svg {
+  width: 500px;
+  height: auto;
+  max-width: 90%;
+  align-self: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}

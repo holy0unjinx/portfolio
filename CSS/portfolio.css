@@ -1,0 +1,172 @@
+/* First ------------------------------------------------------------------ */
+
+#first {
+  position: relative;
+  /* 동적 어쩌구 주소창 방지용 */
+  height: 100dvh;
+  overflow: hidden;
+}
+
+#first::selection {
+  background: none;
+  text-decoration: underline;
+}
+
+.shin,
+.sung {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#first header {
+  container-type: inline-size;
+}
+
+#first h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20cqw;
+  z-index: 1;
+}
+
+#first .sung {
+  font-size: 20cqw;
+  padding: 0.5rem 7%;
+  padding-bottom: 1rem;
+  line-height: 1;
+  position: absolute;
+  /* 뭔가어려운수학적인 코드... 450이면 0, 300이면 1 그 사잇값나옴*/
+  --move: clamp(0, (550px - 100vw) / 250px, 1);
+  top: calc(1rem + 21% * var(--move));
+  left: 5%;
+  border: 1px solid var(--text);
+  color: var(--bg);
+  z-index: 0;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2px #111111;
+  color: #ffffff;
+  /* transform: translateY(-50%); */
+  font-weight: 900;
+}
+
+#first .img {
+  position: absolute;
+  display: inline-block;
+  max-width: 620px;
+  width: calc(100% - 58px);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-55%) translateY(-50%);
+}
+
+#first img {
+  position: relative;
+  z-index: 3;
+
+  width: 95%;
+}
+
+#first .img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translateX(10%);
+}
+
+#first .under {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  container-type: inline-size;
+}
+
+#first h2 {
+  line-height: 0.8;
+  font-size: 15cqw;
+  padding-left: 0.5rem;
+}
+
+#first .shin {
+  position: absolute;
+  padding: 0.5rem 7%;
+  background-color: var(--text);
+  color: var(--bg);
+  font-weight: 900;
+  font-size: 20cqw;
+  line-height: 1;
+  bottom: calc(15cqw * 1.7);
+  right: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 450px) {
+  #first .shin {
+    --move: clamp(0, (450px - 100vw) / 220px, 1);
+    bottom: calc(15cqw * 1.7 + 25vh * var(--move));
+  }
+}
+
+@media screen and (min-width: 460px) {
+  #first h2 {
+    font-size: 69px;
+  }
+
+  #first .shin {
+    bottom: 117.3px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  #first h2 {
+    font-size: 8cqw;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  #first h1 {
+    font-size: 108px;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  #first h1 {
+    font-size: 12cqw;
+  }
+}
+
+@media screen and (min-width: 694px) {
+  #first .sung,
+  #first .shin {
+    font-size: 140px;
+  }
+
+  #first .under {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+
+  #first .shin {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  #first .sung {
+    top: 1rem;
+    /* transform: none; */
+  }
+}
+
+/* Second ------------------------------------------------------------------ */

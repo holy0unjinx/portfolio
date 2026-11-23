@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap");
+
+@font-face {
+  font-family: "CMU Serif";
+  src: url(./assets/cmunbx.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  src: url(./assets/cmunrm.ttf);
+  font-weight: normal;
+}
+
+:root {
+  --serif-font: "CMU Serif", serif;
+  --text: #000;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.serif {
+  font-family: var(--serif-font);
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* 이미지 드래그 막기 */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
