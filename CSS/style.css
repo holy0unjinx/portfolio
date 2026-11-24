@@ -12,8 +12,21 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Wanted Sans";
+  src: url(./assets/wantedbd.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Chosun SM";
+  src: url(./assets/chosunsm.ttf);
+  font-weight: normal;
+}
+
 :root {
-  --serif-font: "CMU Serif", serif;
+  --serif: "CMU Serif", "Chosun SM", serif;
+  --gothic: "Wanted Sans", sans-serif;
   --text: #000;
   --bg: #fff;
 }
@@ -25,7 +38,11 @@
 }
 
 .serif {
-  font-family: var(--serif-font);
+  font-family: var(--serif);
+}
+
+.gothic {
+  font-family: var(--gothic);
 }
 
 html,
