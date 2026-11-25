@@ -113,6 +113,11 @@ footer {
   margin-bottom: 1rem;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     flex-direction: row;
@@ -122,11 +127,12 @@ footer {
   #contact,
   #content {
     flex: 1;
+    height: 100%;
   }
 
   #content {
     align-self: center;
-    margin-bottom: 10rem;
+    justify-content: space-evenly;
   }
 }
 @media screen and (max-height: 622px) {
@@ -138,9 +144,11 @@ footer {
   #contact,
   #content {
     flex: 1;
+    height: 100%;
   }
 
   #content {
     align-self: center;
+    justify-content: space-evenly;
   }
 }
