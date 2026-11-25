@@ -13,7 +13,12 @@
       left: 0;
       z-index: 9999;
       pointer-events: none;
+      backdrop-filter: invert(0);
+      transition: backdrop-filter 450ms ease-out;
+    }
+    #fake-drag.active {
       backdrop-filter: invert(1);
+      transition: none;
     }
     #fake-drag .corner {
       position: absolute;
@@ -23,6 +28,12 @@
       background: white;
       border: 1px solid black;
       transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 450ms ease-out;
+    }
+    #fake-drag.active .corner {
+      opacity: 1;
+      transition: none;
     }
     #fake-drag .corner:nth-child(1) { left: 0; top: 0; }
     #fake-drag .corner:nth-child(2) { left: 100%; top: 0; }
@@ -33,7 +44,6 @@
 
   const overlay = document.createElement("div");
   overlay.id = "fake-drag";
-  overlay.hidden = true;
   overlay.setAttribute("aria-hidden", "true");
   for (let i = 0; i < 4; i++) {
     const corner = document.createElement("span");
@@ -46,7 +56,7 @@
   let dragged = false;
   const clear = () => {
     start = null;
-    overlay.hidden = true;
+    overlay.classList.remove("active");
   };
 
   document.addEventListener("selectstart", (event) => event.preventDefault());
@@ -55,6 +65,9 @@
   // 마우스 내림
   window.addEventListener("pointerdown", (event) => {
     if (event.pointerType !== "mouse" || event.button !== 0) return;
+    overlay.classList.remove("active");
+    overlay.style.width = "0px";
+    overlay.style.height = "0px";
     dragged = false;
     start = { x: event.clientX, y: event.clientY };
     window.getSelection()?.removeAllRanges();
@@ -76,7 +89,7 @@
       width: `${width}px`,
       height: `${height}px`,
     });
-    overlay.hidden = false;
+    overlay.classList.add("active");
   });
 
   //마우스 떼기

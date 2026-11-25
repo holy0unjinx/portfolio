@@ -19,6 +19,12 @@
 }
 
 @font-face {
+  font-family: "Wanted Sans";
+  src: url(./assets/wantedrg.ttf);
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "Chosun SM";
   src: url(./assets/chosunsm.ttf);
   font-weight: normal;

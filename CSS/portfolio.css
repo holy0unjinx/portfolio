@@ -11,7 +11,7 @@ body section:last-child {
 #first {
   position: relative;
   /* 동적 어쩌구 주소창 방지용 */
-  height: 100dvh;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -181,8 +181,7 @@ body section:last-child {
 
 #second {
   --profile-image-width: min(calc(50vw - 1rem), 350px);
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   padding: 1rem;
   padding-bottom: 0;
   position: relative;
@@ -202,6 +201,7 @@ body section:last-child {
 #second header div {
   font-size: clamp(32px, 9cqw, 64px);
   line-height: 0.8;
+  font-weight: bold;
 }
 
 #second header .en {
@@ -247,11 +247,12 @@ body section:last-child {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 #footer a {
   display: block;
   margin: 0 1rem;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 5cqw, 2rem);
   color: #000;
 }

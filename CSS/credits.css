@@ -1,0 +1,67 @@
+body {
+  min-height: calc(100dvh - 2rem);
+  width: 100vw;
+  overflow-x: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  font-family: var(--serif);
+}
+
+table {
+  align-self: center;
+  margin-top: 1rem;
+  border-collapse: separate;
+  border-spacing: 1rem 0.5rem;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  text-align: end;
+  white-space: nowrap;
+}
+td {
+  text-align: start;
+  word-break: keep-all;
+}
+
+h1 {
+  font-family: var(--gothic);
+  font-weight: normal;
+  line-height: 0.9;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+h1 .y {
+  display: inline-block;
+  font-weight: bold;
+  transform: scaleX(1.35);
+}
+
+h1 .pp {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  transform: scaleX(1.32);
+}
+
+.noto {
+  font-family: "Noto Sans JP";
+}
+
+a {
+  color: #000;
+}
+
+a svg {
+  width: 1rem;
+}
