@@ -220,7 +220,7 @@ body section:last-child {
   float: left;
 }
 
-.infobox div:last-child {
+#second .infobox div:last-child {
   margin-right: 0;
 }
 
@@ -241,4 +241,17 @@ body section:last-child {
   line-height: 1.5;
   word-break: keep-all;
   overflow-wrap: anywhere;
+}
+
+#footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#footer a {
+  display: block;
+  margin: 0 1rem;
+  font-size: 1.25rem;
+  color: #000;
 }

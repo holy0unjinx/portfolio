@@ -15,12 +15,31 @@
       pointer-events: none;
       backdrop-filter: invert(1);
     }
+    #fake-drag .corner {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      box-sizing: border-box;
+      background: white;
+      border: 1px solid black;
+      transform: translate(-50%, -50%);
+    }
+    #fake-drag .corner:nth-child(1) { left: 0; top: 0; }
+    #fake-drag .corner:nth-child(2) { left: 100%; top: 0; }
+    #fake-drag .corner:nth-child(3) { left: 0; top: 100%; }
+    #fake-drag .corner:nth-child(4) { left: 100%; top: 100%; }
   `;
   document.head.append(style);
 
   const overlay = document.createElement("div");
   overlay.id = "fake-drag";
   overlay.hidden = true;
+  overlay.setAttribute("aria-hidden", "true");
+  for (let i = 0; i < 4; i++) {
+    const corner = document.createElement("span");
+    corner.className = "corner";
+    overlay.append(corner);
+  }
   document.body.append(overlay);
 
   let start = null;

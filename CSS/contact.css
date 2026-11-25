@@ -136,7 +136,7 @@ footer {
     justify-content: space-evenly;
   }
 }
-@media screen and (max-height: 622px) {
+@media screen and (orientation: landscape) {
   .container {
     flex-direction: row;
     gap: 16px;
