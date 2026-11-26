@@ -63,7 +63,6 @@ a {
 input,
 textarea {
   border: 1px solid #000;
-  outline: none;
   font-family: var(--serif);
   resize: none;
   padding: 0.75rem 1rem;
