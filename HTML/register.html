@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <title>Login</title>
+    <script src="../JS/fakedrag.js" defer></script>
+    <script src="../JS/robot.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="serif">Register</h1>
+    </header>
+    <form action="../index.html">
+      <div id="contents">
+        <input
+          type="text"
+          id="id"
+          placeholder="아이디를 입력해주세요."
+          required
+        /><br />
+        <input
+          type="password"
+          id="pw"
+          placeholder="비밀번호를 입력해주세요."
+          required
+        /><br />
+        <input
+          type="password"
+          id="pw2"
+          placeholder="비밀번호를 다시 입력해주세요."
+          required
+        /><br />
+        <div class="verify">
+          <div id="v">asdf12</div>
+          <input
+            type="text"
+            id="verify"
+            placeholder="코드를 입력해주세요."
+            required
+          />
+        </div>
+      </div>
+      <footer>
+        <div class="agree">
+          <label for="agree"><a href="../index.html">가입 약관 동의</a></label>
+          <input type="checkbox" name="agree" id="agree" required />
+        </div>
+        <input type="submit" />
+      </footer>
+    </form>
+  </body>
+</html>
