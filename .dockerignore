@@ -1,0 +1,12 @@
+*
+!Dockerfile
+!nginx.conf
+!index.html
+!robots.txt
+!sitemap.xml
+!HTML/
+!HTML/**
+!CSS/
+!CSS/**
+!JS/
+!JS/**
