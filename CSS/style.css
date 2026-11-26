@@ -1,33 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap");
-
 @font-face {
   font-family: "CMU Serif";
-  src: url(./assets/cmunbx.woff2) format("woff2");
+  src: url(./assets/cmunbx.subset.woff2) format("woff2");
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "CMU Serif";
-  src: url(./assets/cmunrm.woff2) format("woff2");
+  src: url(./assets/cmunrm.subset.woff2) format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Wanted Sans";
-  src: url(./assets/wantedbd.woff2) format("woff2");
+  src: url(./assets/wantedbd.subset.woff2) format("woff2");
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Wanted Sans";
-  src: url(./assets/wantedrg.woff2) format("woff2");
+  src: url(./assets/wantedrg.subset.woff2) format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Chosun SM";
-  src: url(./assets/chosunsm.woff2) format("woff2");
+  src: url(./assets/chosunsm.subset.woff2) format("woff2");
   font-weight: normal;
+  font-display: swap;
 }
 
 :root {
@@ -41,7 +44,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-display: swap;
 }
 
 .serif {
