@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="../CSS/login.css" />
-    <link rel="shortcut icon" href="./assets/favicon.jpg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon.webp?v=2"
+      type="image/webp"
+    />
     <title>Login</title>
     <script src="../JS/fakedrag.js" defer></script>
     <script src="../JS/robot.js" defer></script>
@@ -16,8 +20,18 @@
     </header>
     <form action="../index.html">
       <div id="contents">
-        <input type="text" id="id" placeholder="아이디를 입력해주세요." /><br />
-        <input type="password" id="pw" placeholder="비밀번호를 입력해주세요." />
+        <input
+          type="text"
+          id="id"
+          placeholder="아이디를 입력해주세요."
+          required
+        /><br />
+        <input
+          type="password"
+          id="pw"
+          placeholder="비밀번호를 입력해주세요."
+          required
+        />
       </div>
       <footer>
         <a href="./register.html">계정이 없으신가요?</a><br />

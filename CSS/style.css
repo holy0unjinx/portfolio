@@ -2,31 +2,31 @@
 
 @font-face {
   font-family: "CMU Serif";
-  src: url(./assets/cmunbx.ttf);
+  src: url(./assets/cmunbx.woff2) format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "CMU Serif";
-  src: url(./assets/cmunrm.ttf);
+  src: url(./assets/cmunrm.woff2) format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Wanted Sans";
-  src: url(./assets/wantedbd.ttf);
+  src: url(./assets/wantedbd.woff2) format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Wanted Sans";
-  src: url(./assets/wantedrg.ttf);
+  src: url(./assets/wantedrg.woff2) format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Chosun SM";
-  src: url(./assets/chosunsm.ttf);
+  src: url(./assets/chosunsm.woff2) format("woff2");
   font-weight: normal;
 }
 
