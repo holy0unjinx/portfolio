@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /register
+Disallow: /HTML/login
+Disallow: /HTML/register
+
+Sitemap: https://shxin.kr/sitemap.xml
