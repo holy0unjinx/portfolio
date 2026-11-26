@@ -72,19 +72,46 @@
         </section>
       </aside>
 
-      <form id="contact">
-        <input type="text" name="title" id="title-input" placeholder="Title" />
+      <form
+        id="contact"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="c4753187-a286-434f-860f-ddd34be60891"
+        />
+        <input type="hidden" name="redirect" value="https://shxin.kr/success" />
+        <input
+          type="checkbox"
+          name="botcheck"
+          style="display: none"
+          tabindex="-1"
+        />
+        <input
+          type="text"
+          name="subject"
+          id="title-input"
+          placeholder="Title"
+          aria-label="Title"
+          required
+        />
         <input
           type="email"
           name="email"
           id="email-input"
           placeholder="Email"
           autocomplete="email"
+          aria-label="Email"
+          required
         />
         <textarea
-          name="content"
+          name="message"
           id="contant-input"
           placeholder="Lorem Ipsum"
+          aria-label="Message"
+          required
         ></textarea>
 
         <footer>
